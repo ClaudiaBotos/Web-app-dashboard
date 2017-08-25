@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+<meta charset="utf-8">
+      <title>Web App Dashboard</title>
+      <link href='css/normalize.css' rel='stylesheet' type='text/css'/>
+      <link href="css/styles.css" rel="stylesheet" type="text/css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+      <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Kurale" rel="stylesheet">
+      
+</head>
+<body>
+<header class='main-header '>
+<h1 class='app-name '> <a href="index.html" tabindex='1'>Your<span class='app-text'>App&trade;</span> </a></h1>
+
+    <ul class='header-li clearfix'>
+    
+<li>
+<div class='bell-svg bell-badge' data-badge=''>
+    <span class='pop-up' data-tip='' tabindex='2'>
+   
+<svg version="1.1" class='bell' id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<g id="_x36__6_">
+	<g>
+		<path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+			c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+	</g>
+</g>
+</svg>
+        
+    </span>
+</div>
+    </li>
+    
+ 
+    
+    
+    <li >
+        <div class='image'>
+            <img class='profile-picture' src='img/profile-picture.JPG' alt='Profile Picture of Popa Claudia'> 
+        </div>
+        
+        </li>
+        
+        <li>
+        <p> <a class='profile-name' href='index.html' tabindex='3'>Popa Claudia</a></p>
+        
+    </li>
+    
+    </ul>
+    
+    </header>
+    
+  
+    
+    <section id='pop-up' class='pop-up notify-li'>
+        <h3 class='notify-h'>Notifications</h3>
+        <ul class='pop-up'>
+             <li>Check out our charts <span class='closebtn-li'>&times;</span></li>
+             <li> Follow our page<span class='closebtn-li'>&times;</span></li>
+             <li>Don't forget to smile<span class='closebtn-li'>&times;</span></li>
+         </ul>
+        
+    </section>
+    
+    
+    
+
+
+    
+    <aside class='sidebar'>
+    <nav class='nav-bar clearfix'>
+        <ul>
+         <li>
+             <a class='nav-icon' href='#dashboard'><img src='icons/icon-dashboard.svg' alt='Dashboard nav icon'>
+             
+             </a>
+            
+         </li>
+            
+            <li>
+             <a class='nav-icon' href='#members'><img src='icons/icon-members.svg' alt='Members nav icon'>
+             
+             </a>
+            
+         </li>
+            
+            <li>
+             <a class='nav-icon' href='#visits'><img src='icons/icon-visits.svg' alt='Visits nav icon'>
+             </a>
+            
+         </li>
+            
+            <li>
+             <a class='nav-icon' href='#settings'><img src='icons/icon-settings.svg' alt='Settings nav icon'>
+             </a>
+            
+         </li>
+        
+         </ul>
+    
+    </nav>
+    
+    
+</aside>
+
+<main class='main-section wrapper clearfix'> 
+    
+    <h3 class='clearfix dashboard' id='dashboard'>Dashboard</h3>
+    <div class='search-dashboard clearfix'>
+    <input class='search clearfix' type='text' name='search' placeholder='Search'>
+    </div>
+    
+    <div class='alert'>
+        <span class='closebtn' onclick="this.parentElement.style.display='none';">&times;</span>
+        
+       <p><strong>Alert!</strong> The data may vary from hour to hour, as our charts are live updated. </p>
+        
+ </div>
+    
+    
+    <nav class='chart-nav clearfix'>
+        <ul id='button'>
+        <li><a href='#hourlyChart' class='buttonChart'>Hourly</a></li>    
+        <li><a href='#dailyChart' class='buttonChart'>Daily</a></li>
+        <li><a href='#weeklyChart' class='buttonChart'>Weekly</a></li>
+        <li><a href='#monthlyChart' class='buttonChart'>Monthly</a></li>
+        
+        </ul>
+    
+    </nav>
+       
+    
+    
+    
+    <div class='webChart'>
+        
+       <canvas id='hourlyChart'></canvas>
+        
+        <canvas id='dailyChart'></canvas>
+        
+        <canvas id='weeklyChart'></canvas>
+        
+        <canvas id='monthlyChart'></canvas>
+        
+    </div>
+    
+    
+</main>
+    
+<footer>
+    
+</footer>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js'></script>
+   <script src='js/app.js'> </script>
+
+        
+ 
+
+    </body>
+
+</html>
