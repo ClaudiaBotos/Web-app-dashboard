@@ -6,12 +6,16 @@
   box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
 
-
-body {
+ body {
 	font-family: 'Droid Sans', 'Kurale', serif, sans-serif;
 	background-color:#fff;
 	color: #007a4b;
+    height: 100%;
+    width: 100%;
 }
 
 h1 {
@@ -162,32 +166,53 @@ a {
 
 /* ---- Pop-up window from Bell Badge ---- */
 
-.notify-li {
-    width: 100%;
+.notify-li{
+   
     background-color: #B6DCC7;
     color:#913d88;
-    display: inline-block;
+    display: block;
     border: 1px solid #4C906B;
     border-radius: 5px;
-    display: none;
+    margin: 0 auto;
+    width: 300px;
+    
+    
+    
  }
+
+#pop-up{
+    display: none;
+}
 
 
 
 .notify-li li {
   padding-bottom: 5px;
+    position: relative;
     
 }
 
+.notify-h {
+    margin-left: 10px;
+}
+
 .closebtn-li {
+   margin-left: 15px;
+    margin-right: 20px;
     font-weight: bold;
-    font-size: 1.2rem;
-    margin-left: 15px;
+    cursor: pointer;
+    transition:0.3s;
+    font-size: 2rem;
+    position: absolute; 
     transition: 0.3s;
-    
+    top: 1px;
+    right: -1px;
+
     
     
 }
+
+
 
 .closebtn-li:hover {
     color:#db0a5b;
@@ -200,6 +225,7 @@ a {
     cursor:pointer;
     position: relative;
     }
+
 .pop-up::before,
 .pop-up::after {
     position:absolute;
@@ -324,6 +350,7 @@ input:focus {
 .closebtn:hover{
     color:#d43900;
     
+    
    
 }
 
@@ -333,6 +360,13 @@ input:focus {
 **********************/
 
 
+.chartHeading  {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+}
+
 .chart-nav  ul{
     padding-left: 0;
     text-align: center;
@@ -340,7 +374,7 @@ input:focus {
 
 .chart-nav a{
     font-weight:bold;
-    font-size: 1rem; 
+    font-size: .8rem; 
     color: #007a4b;
     
     
@@ -362,23 +396,85 @@ input:focus {
     background-color: #6bce6b;
     border-radius: 15px;
     color: #fff;
+    width: 80px;
+   
 }
 
 .chart-nav a:hover {
     color: #fff;
     
 }
+ 
+.clicked {
+    background-color: #6bce6b;
+    border-radius: 15px;
+    width: 80px;
+    
+   
+}
 
+.clicked a {
+    color: #fff
+}
 
 .webChart {
+    height: 180px;
+}
+
+
+
+.mobileChart,
+.barChart,
+.webChart {
     padding: 15px;
+    width: 100%;
+   
 }
 
 
 
 
 
+/**********************
+ Social Widgets Styles
+**********************/
 
+
+.widget-container{
+    border: 1px solid #9edf9e; 
+    text-align: center;
+    padding-top: 20px;
+}
+
+.svg-div {
+    width: 70px;
+    height: 70px;
+    background-color: #007a4b;
+    border-radius: 50%;
+   margin: 0 auto;
+    display: inline-block;
+    position: relative;
+   
+}
+
+
+.widget {
+    height: 50px;
+    width: 50px;
+    fill: #fff;
+    position: absolute;
+    margin: auto;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+    
+     }
+
+.social-heading {
+    text-align: center;
+    font-size: 1rem;
+}
 
 
 
@@ -403,10 +499,13 @@ input:focus {
     }
     
     .sidebar {
+        background-color: #16a085;
         float:left;
         height: 100%;
         width: 10%;
     }
+    
+    
     
     .nav-bar ul {
         flex-direction: column;
@@ -440,7 +539,12 @@ input:focus {
     }
     
     .notify-li {
-        width: 50%;
+        width: 400px;
+        float: right;
+        margin-right: 10px;
+        display: inline-block;
+       
+        
     }
     
     
@@ -490,11 +594,81 @@ input:focus {
     }
     
     
-    .webChart {
-    width: 50%;
-}
-
+    .chartHeading {
+        float: left;
+        margin-left: 50px;
+        clear: both;
+        
+    }
     
+    .webChart {
+    width: 100%;
+    height: 200px;
+    
+}
+    
+    
+    .chart-nav  ul {
+        float: right;
+        margin: 30px 10px;
+        padding-right: 30px;
+    }
+    
+
+   
+    
+    .dailyChart,
+    .userChart {
+      float: left;
+      border: 1px solid #9edf9e;
+      
+     
+      }
+    
+   
+    .mobileChart{
+        height: 70%;
+        margin: 0 auto;
+     
+    }
+    
+    
+    .userChart,
+    .chart{
+        width: 50%;
+        height: 300px;
+    }
+    
+    .social-container {
+        width: 100%;
+        text-align: center;
+    }
+   
+    .social-heading {
+     text-align: left;
+     padding-top: 20px;
+    }
+    
+    .widget-container {
+        width: 200px;
+        background-color: #f2f2f2;
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+        
+      }
+    
+    .widget-container h4 {
+        float: right;
+        margin-right: 35px;
+    }
+    
+    .widget-container p {
+        text-align: right;
+        font-size: 1.6rem;
+        margin-right: 20px;
+      
+    }
 }
 
 
@@ -505,9 +679,11 @@ input:focus {
         width: 95%;
     }
     
-    
+       
+        
     .sidebar {
         width: 5%;
+        
     }
     
     .search {
@@ -522,7 +698,38 @@ input:focus {
         width: 95%;
         
     }
+        
+         .webChart {
+     height: 300px;
+    position: relative;
+    
+}
+        .mobileChart{
+        height: 90%;
+        margin: 0 auto;
+     
+    }
+        
+    
+        
+    
+    
+    .userChart,
+    .chart{
+        width: 50%;
+        height: 450px;
+    }
+    
+        .widget-container {
+        width: 300px;
+        margin: 10px;
+        
+        
+    }
+        
     
     }
+
+
 
 

@@ -4,12 +4,34 @@ const hourTrafficChart= document.getElementById('hourlyChart');
 const dayTrafficChart= document.getElementById('dailyChart');
 const weekTrafficChart= document.getElementById('weeklyChart');
 const monthTrafficChart= document.getElementById('monthlyChart');
+const barChart= document.getElementById('dailyTraffic');
+const doughnutChart=document.getElementById('mobileChart');
+
+
+
+//Close button alert
+$('.closebtn').on("click", function(){ 
+$(popUp).slideUp();
+});
+
+
+//Notification slide down on click 
+
+$('.bell-badge').on("click", function(){
+    $("#pop-up").slideDown();
+    
+});
+
+
+
+
 
 
 //hour Traffic//
 
 const hourlyChart = new Chart( hourTrafficChart, {
     type: 'line',
+   
      data: {
         labels:['0-2', '3-5', '6-8', '9-12', '13-15', '16-18', '19-21', '22-24'], 
     
@@ -28,6 +50,8 @@ const hourlyChart = new Chart( hourTrafficChart, {
     },
     
     options:{
+    responsive: 'true',
+     maintainAspectRatio: false,
       legend: {display:false} ,
       
        
@@ -57,6 +81,8 @@ const dailyChart = new Chart( dayTrafficChart, {
       },
     
      options:{
+         responsive: 'true',
+     maintainAspectRatio: false,
       legend: {display:false}  
     },
         
@@ -84,6 +110,8 @@ const weeklyChart = new Chart( weekTrafficChart, {
      },
     
      options:{
+         responsive: 'true',
+     maintainAspectRatio: false,
       legend: {display:false}  
     },
         
@@ -110,13 +138,9 @@ const montlyChart = new Chart( monthTrafficChart, {
       },
     
     options: {
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero:true
-                  }
-              }]
-          },
+        responsive: 'true',
+     maintainAspectRatio: false,
+          
           legend: {display: false}
       }
         
@@ -124,9 +148,147 @@ const montlyChart = new Chart( monthTrafficChart, {
 
 
 
-//Setting defaults
+//Charts hidden, except the Hoyrly one
+
+  $('#dailyChart').hide();
+  $('#weeklyChart').hide();
+  $('#monthlyChart').hide();
+
+//Change Color to selected buttons
+
+$('li.button-chart').on("click", function(){
+   if($(this).hasClass("clicked")){
+    $(this).removeClass("clicked");
+  } else {
+    $(this).addClass("clicked");
+  }
+    
+});
+
+
+
+
+
+
+
+//***Hourly**//
+
+$('#hour-nav').click(function() {
   
+  $('#hourlyChart').show();
+  $('#dailyChart').hide();
+  $('#weeklyChart').hide();
+  $('#monthlyChart').hide();
+  
+     
+ 
+
+ 
+});
 
 
+//***Daily**//
+
+$('#day-nav').click(function() {
+  $('#hourlyChart').hide();
+  $('#dailyChart').show();
+  $('#weeklyChart').hide();
+  $('#monthlyChart').hide();
+  
+ 
+});
+
+
+//***Weekly**//
+
+$('#week-nav').click(function() {
+  $('#hourlyChart').hide();
+  $('#dailyChart').hide();
+  $('#weeklyChart').show();
+  $('#monthlyChart').hide();
+  
+ 
+});
+
+
+//***Monthly**//
+
+$('#month-nav').click(function() {
+  $('#hourlyChart').hide();
+  $('#dailyChart').hide();
+  $('#weeklyChart').hide();
+  $('#monthlyChart').show();
+  
+});
+
+
+// Bar Chart Daily Traffic
+
+
+const myBarChart = new Chart(barChart, {
+    type: 'bar',
+    data: {
+        labels: ['S','M','T','W','T','F','S'],
+        datasets:[
+            { data: [160, 75, 150, 90, 200, 100, 230],
+         borderColor: '#65cc65',
+         backgroundColor: '#74d174',
+         borderWidth: 1,
+        
+          
+        }],
+        
+
+    },
+             options: {
+        responsive: 'true',
+        
+     
+         legend: {display: false}
+      }
+    
+  
+});
+
+
+// Doughnut Chart for Mobile Users
+
+
+const myMobileChart= new Chart(doughnutChart,{
+    type:'doughnut',
+    data:{
+        labels:['Phone','Tablets','Desktop'],
+        datasets: [
+            {  data:[160, 80, 280],
+             backgroundColor:['#81de7e','#7e81de','#de7e81'],
+             }
+        ],
+      
+    },
+    
+      options: {
+        responsive: 'true',
+          maintainAspectRatio: false,
+        legend: {
+        display: true,
+        position: 'right',
+        labels:{boxWidth: 20,
+                fontSize: 12,
+                fontColor:'#007a4b',
+                fontStyle:'bold'},
+        
+      },
+          layout: {
+      padding: 20
+    },
+              
+      cutoutPercentage: 50,
+      animation: {
+        animateScale: true
+      }
+   
+        
+      }
+});
 
        
