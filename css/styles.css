@@ -267,7 +267,8 @@ a {
     display: flex;
     padding: 10px 20px;
     flex-direction: row;
-    justify-content:space-between
+    justify-content:space-between; 
+    padding-left:1.6rem; 
    
     
   
@@ -461,7 +462,7 @@ input:focus {
 .widget {
     height: 50px;
     width: 50px;
-    fill: #fff;
+    fill: #ffffff;
     position: absolute;
     margin: auto;
    top: 0;
@@ -477,8 +478,263 @@ input:focus {
 }
 
 
+/**********************
+ New Members Section
+**********************/
 
 
+.members-h {
+    text-align: center; 
+    margin-bottom: 80px;
+  
+
+}
+
+.members ul {
+  padding-left: 20px;
+padding-right: 20px;
+
+    
+}
+
+
+
+
+.members li {
+   list-style: none;
+    border-bottom: 1px solid #9edf9e ;
+    margin-top: 10px;
+    
+}
+
+
+.members li:last-child {
+    
+    border-bottom: none;
+}
+
+
+
+.members-img,
+.info {
+    width: 50%;
+    float: left;
+}
+
+
+
+
+
+
+.members h5 {
+    margin-bottom: 0;
+}
+
+.email {
+    font-size: 0.7rem;
+    color:#007a4b;
+ }
+
+.avatar {
+    border-radius: 50%;
+    width:100px;
+    display: inline-block;
+    padding-bottom: 15px;
+   
+}
+
+
+/***************************
+ Recent Activities Section
+****************************/
+
+.recent-users {
+    list-style: none;
+      padding-left: 20px;
+    padding-right: 20px;
+}
+
+.recent-users li {
+    margin-top: 10px;
+    border-bottom: 1px solid #9edf9e ;
+}
+
+.recent-img, 
+.recent-p {
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+}
+
+.recent-users p {
+    font-size: 0.8em;
+    display: inline-block;
+
+}
+
+
+.recent-users li:last-child{
+    border-bottom: none;
+}
+
+
+
+/**********************
+ Message User Section
+**********************/
+
+.message-h {
+    text-align: center;
+}
+
+.form {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    
+ }
+
+.form-search,
+.message-btn,
+.textarea
+
+ {
+    display: block;
+    width: 90%;
+    padding-bottom: 30px;
+     margin: 0 auto;
+    
+    
+  
+}
+
+.textarea {
+  height: 150px;
+  border: none;
+  font-size: 14px;
+  margin: 0 auto;
+  outline: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  border-radius: 5px;
+   margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.textarea:focus {
+    outline:0;
+    border: 2px solid #1abc9c;
+    background-color:#fafafa;
+}
+
+.message-btn {
+    height: 25px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1abc92;
+    text-align: center;
+    padding-top: 10px;
+    border: none;
+    border-radius: 5px;
+   
+    
+}
+
+
+.errorMessage {
+    font-size: 13px;
+    background-color: #ff5d5d;
+    opacity:0.8;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-left:10px;
+    padding-left: 20px;
+    width: 90%;
+    display: none;
+}
+
+
+.successMessage {
+    font-size: 13px;
+    background-color: #6db66d;
+    opacity:0.8;
+    color: #fff;
+    height: 18px;
+    margin-bottom: 20px;
+    margin-left:10px;
+    padding-left: 20px;
+    width: 90%;
+    display: none;
+}
+
+
+/**********************
+ Settings Section
+**********************/
+
+label {
+    width: 100px;
+    padding-left: 15px;
+    
+}
+
+.toggle,
+.strong {
+    width: 50%;
+    float: left;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    margin: 0 auto;
+}
+
+
+.timezone {
+    width: 90%;
+    margin: 0 auto;
+    display:block;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    border: none;
+    padding-bottom: 15px;
+    
+}
+
+.timezone:focus {
+    outline:0;
+    border: 2px solid #1abc9c;
+    background-color:#fafafa;
+    
+}
+
+
+.setting-btn {
+   width: 80%;
+   display: block;
+   margin: 0 auto;
+   height: 50px;
+   background-color: #bdbdbd;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+  
+}
+
+.settings {
+    padding-top: 50px;
+}
+
+.setting-btn:focus {
+     background-color: #1abc92;
+    outline:0;
+    border: 2px solid #1abc9c;
+}
 
 
 /* ---- Float clearfix ---- */
@@ -503,19 +759,25 @@ input:focus {
         float:left;
         height: 100%;
         width: 10%;
+        padding-bottom: 100%;
+        
+        
+        
     }
     
     
     
     .nav-bar ul {
-        flex-direction: column;
+        display: block;
+        position: fixed;;
         margin-right: 0;
         height: 100%;
-        
+       
       }
     
     .nav-bar li {
         padding-bottom: 20px ;
+    
         
     }
     
@@ -672,6 +934,80 @@ input:focus {
         margin-top: 0;
       
     }
+    
+     
+    .info p {
+        display: inline-block;
+      
+       
+    }
+    
+      .members-img {
+            width: 20%;
+            float: left;
+            
+        }
+    
+        
+        .info {
+            width: 80%;
+            float: left;
+        }
+    
+     
+        .user-name, 
+        .email {
+           width: 50%;
+            display: inline-block;
+        }
+        
+        
+        .info-p {
+            width: 50%;
+            float: right;
+            position: relative;
+            top: -10px;
+            text-align: right;
+            font-size: 0.8em;
+        }
+        
+    .btn-1,
+    .btn-2 {
+        width: 50%;
+        float: left;
+    }
+    
+    
+   
+    .strong,
+    .toggle
+     {
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .btn-1,
+    .btn-2 {
+        padding-top: 10px;
+    }
+
+    
+    .timezone {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 50px;
+    }
+    
+    .errorMessage {
+        width: 70%;
+        margin-left: 70px;
+        height: 18px;
+    }
+    
+    .successMessage {
+        width: 30%;
+        margin-left: 70px;
+    }
 }
 
 
@@ -688,6 +1024,10 @@ input:focus {
         width: 5%;
     
      }
+        
+        .nav-bar ul {
+            padding-right: 21px;
+        }
     
     .search {
         width: 40%;
@@ -729,6 +1069,66 @@ input:focus {
         
         
     }
+        
+        .members-recent {
+            margin-top: 50px;
+        }
+      
+       
+        .user-name,
+        .email {
+            top: 0%; 
+            text-align: left;
+            position: relative;
+            
+        }
+        
+        
+        .info p {
+          margin: 0;  
+        }
+        
+    
+        
+          .members,
+    .recent-activity {
+        width: 50%;
+        float: left;
+        border: 1px solid #9edf9e;
+       
+    }
+        
+        
+        .members-h {
+            text-align: left;
+            padding-left: 20px;
+        } 
+        
+        .message-h {
+            text-align: left;
+            padding-bottom: 50px;
+            padding-left: 20px;
+        }
+        
+        .message-user {
+            
+           padding-bottom: 20px;
+            border-right: 1px solid #9edf9e;
+        }
+        
+        .settings {
+            padding-top: 10px;
+            border-left:  1px solid #9edf9e;
+        }
+        
+        .settings,
+        .message-user {
+            width: 50%;
+            float: left;
+        
+            
+        }
+        
         
     
     }

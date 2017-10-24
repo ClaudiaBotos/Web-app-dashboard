@@ -157,11 +157,8 @@ const montlyChart = new Chart( monthTrafficChart, {
 //Change Color to selected buttons
 
 $('li.button-chart').on("click", function(){
-   if($(this).hasClass("clicked")){
-    $(this).removeClass("clicked");
-  } else {
-    $(this).addClass("clicked");
-  }
+     $('li.button-chart').removeClass('clicked'); 
+    $(this).addClass('clicked');
     
 });
 
@@ -291,4 +288,25 @@ const myMobileChart= new Chart(doughnutChart,{
       }
 });
 
+
+
+
+
+ //Form validation
+      function validateForm() {
+        const userSearch = document.forms["form"]["searchUser"].value;
+        const userMessage = document.forms["form"]["userMessage"].value;
+          if (userSearch == "" || userMessage == "") {
+           $('.errorMessage').show();
+              
+              return false;
+          } else {
+             $('.successMessage').show();
+          }
+             
+      }
+      
+$("#form").submit(function(e) {
+    e.preventDefault();
+});
        
