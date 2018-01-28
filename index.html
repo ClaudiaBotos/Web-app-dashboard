@@ -115,6 +115,8 @@
 
 <main class='main-section wrapper clearfix'> 
     
+    
+    
     <h3 class='clearfix dashboard' id='dashboard'>Dashboard</h3>
     <div class='search-dashboard clearfix'>
     <input class='search clearfix' type='text' name='search' placeholder='Search'>
@@ -415,11 +417,13 @@
         <h4 class='message-h'>MESSAGE USER</h4>
         
         <div class='errorMessage'>
+            
              <p>Alert! Please fill in BOTH User and Message section in order to submit succesfully! </p>
           </div>
         
         
         <div class='successMessage'>
+            
              <p>Message sent with success! </p>
             
         </div>
@@ -452,12 +456,12 @@
     </section>
     
     
-    <section class='settings'>
+    <section class='settings' id='settings'>
         
         <h4 class='members-h'>SETTINGS</h4>
         
         
-        <strong class='strong'>
+        <strong class='strong' id='email'>
     Send Email Notification
   </strong>
         
@@ -477,7 +481,7 @@
         
         
         
-       <strong class='strong'>
+       <strong class='strong' id='public'>
    Set Profile To Public
   </strong>
       
@@ -496,7 +500,7 @@
             </div>
         
         
-        <select class='timezone'  name="DropDownTimezone" id="DropDownTimezone">
+        <select  class='timezone'  name="dropDownTimezone" id="dropDownTimezone">
     <option value='' placeholder='Select Timezone'>Select Timezone</option>
       <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
       <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
@@ -532,12 +536,12 @@
 </select>
         
      <div class='btn btn-1'>
-         <button class='setting-btn' type='submit'>SAVE</button>
+         <button id='saveButton' class='setting-btn' type='submit'>SAVE</button>
         </div>
         
         
    <div class='btn btn-2'>
-       <button class='setting-btn' type='submit'>CANCEL</button>
+       <button id='cancelButton' class='setting-btn' type='submit'>CANCEL</button>
         
         </div>
         
@@ -553,9 +557,7 @@
     
 </main>
     
-<footer>
-    
-</footer>
+
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

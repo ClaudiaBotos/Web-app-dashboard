@@ -1,1138 +1,773 @@
-
-
 /*** Global Layout Set-up ***/
 
-*{ 
-  box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
-
 html, body {
-    height: 100%;
-    overflow: auto;
+	height: 100%;
+	overflow: auto;
 }
-
- body {
+body {
 	font-family: 'Droid Sans', 'Kurale', serif, sans-serif;
-	background-color:#fff;
+	background-color: #fff;
 	color: #007a4b;
-    width: 100%;
+	width: 100%;
 }
-
 h1 {
 	font-family: 'Droid Sans', sans-serif;
 	margin: 0 auto;
-    padding:10px;
-    font-size: 24px;
-    display: inline-block;
-    
-
+	padding: 10px;
+	font-size: 24px;
+	display: inline-block;
 }
-
 a {
 	text-decoration: none;
 	color: #fff;
 }
-
-
-
 /**********************
  HEADER AND NAV STLES
 **********************/
 
-
 .main-header {
-    background-color:#1abc92;
-    height: 60px;
+	background-color: #1abc92;
+	height: 60px;
 }
-
 .app-name {
- display:inline-block;
-  
+	display: inline-block;
 }
-
 .app-text {
-    font-weight:100;
+	font-weight: 100;
 }
-
 /*Animating the SVG bell icon to shake**/
 
 .bell {
-    overflow:visible;
+	overflow: visible;
 }
-
-
 .bell-svg svg {
-    height: 30px;
-    width: 20px;
-    
+	height: 30px;
+	width: 20px;
 }
-
 .bell-svg:hover {
-    animation: shake 1s cubic-bezier(.36 , .07, .19, .97) both;
-    transform: translate3d(0,0,0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-    overflow:visible;
+	animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+	overflow: visible;
 }
-
 @keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-
-  20%, 80% {
-    transform: translate3d(1px, 0, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-3px, 0, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(3px, 0, 0);
-  }
-}   /***End animation ***/
-
-.header-li{
-   margin-bottom: 0; 
-   
+	10%, 90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+	20%, 80% {
+		transform: translate3d(1px, 0, 0);
+	}
+	30%, 50%, 70% {
+		transform: translate3d(-3px, 0, 0);
+	}
+	40%, 60% {
+		transform: translate3d(3px, 0, 0);
+	}
 }
+/***End animation ***/
 
-.header-li{
-    display: inline-block;
-    list-style: none;
-    float: right;
-    
+.header-li {
+	margin-bottom: 0;
 }
-
-.header-li li{
-    display: inline-block;
-    float: left; 
-    padding-right: 10px;
+.header-li {
+	display: inline-block;
+	list-style: none;
+	float: right;
 }
-    
-
+.header-li li {
+	display: inline-block;
+	float: left;
+	padding-right: 10px;
+}
 .header-li li:nth-last-child(3) {
-    border-right: 1px solid #17a98c;
-    margin-right: 10px;
-    
-    
-    
-    
+	border-right: 1px solid #17a98c;
+	margin-right: 10px;
 }
-
 .image {
-   position: relative;
-   width: 30px;
-   height: 30px;
-   border-radius: 50%;
-   overflow: hidden;
-   
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	overflow: hidden;
 }
-
 .profile-picture {
-    width: 100%;
-    height: auto;
-    
-   
-    
+	width: 100%;
+	height: auto;
 }
-
-
 .profile-name {
-   display: none;
+	display: none;
 }
-
-
 /* ---- Bell Badge Styles ---- */
 
 .bell-badge {
-    position: relative;
+	position: relative;
 }
-
 .bell-badge[data-badge]:after {
-    content:attr(data-badge);
-    position: absolute;
-    top: 1px;
-    right: -2px;
-    background: #66ff66;
-    width: 6px;
-    height: 6px;
-    text-align: center;
-     border-radius: 50%;
-    box-shadow: 0 0 1px #333;
+	content: attr(data-badge);
+	position: absolute;
+	top: 1px;
+	right: -2px;
+	background: #66ff66;
+	width: 6px;
+	height: 6px;
+	text-align: center;
+	border-radius: 50%;
+	box-shadow: 0 0 1px #333;
 }
-
-
 /* ---- Pop-up window from Bell Badge ---- */
 
-.notify-li{
-   
-    background-color: #B6DCC7;
-    color:#913d88;
-    display: block;
-    border: 1px solid #4C906B;
-    border-radius: 5px;
-    margin: 0 auto;
-    width: 300px;
-    
-    
-    
- }
-
-#pop-up{
-    display: none;
+.notify-li {
+	background-color: #B6DCC7;
+	color: #913d88;
+	display: block;
+	border: 1px solid #4C906B;
+	border-radius: 5px;
+	margin: 0 auto;
+	width: 300px;
 }
-
-
-
+#pop-up {
+	display: none;
+}
 .notify-li li {
-  padding-bottom: 5px;
-    position: relative;
-    
+	padding-bottom: 5px;
+	position: relative;
 }
-
 .notify-h {
-    margin-left: 10px;
+	margin-left: 10px;
 }
-
 .closebtn-li {
-   margin-left: 15px;
-    margin-right: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition:0.3s;
-    font-size: 2rem;
-    position: absolute; 
-    transition: 0.3s;
-    top: 1px;
-    right: -1px;
-
-    
-    
+	margin-left: 15px;
+	margin-right: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 2rem;
+	position: absolute;
+	transition: 0.3s;
+	top: 1px;
+	right: -1px;
 }
-
-
-
 .closebtn-li:hover {
-    color:#db0a5b;
-
+	color: #db0a5b;
 }
-
-
-
 .pop-up {
-    cursor:pointer;
-    position: relative;
-    }
-
-.pop-up::before,
-.pop-up::after {
-    position:absolute;
-    left: 50%;
-    opacity: 0;
-    z-index: -100;
+	cursor: pointer;
+	position: relative;
 }
-
-.pop-up:hover::before,
-.pop-up:focus::before,
-.pop-up:hover::after,
-.pop-up:focus::after {
-    opacity:1;
-    z-index:100;
+.pop-up::before, .pop-up::after {
+	position: absolute;
+	left: 50%;
+	opacity: 0;
+	z-index: -100;
 }
-
-
-
-
+.pop-up:hover::before, .pop-up:focus::before, .pop-up:hover::after, .pop-up:focus::after {
+	opacity: 1;
+	z-index: 100;
+}
 .tool::after {
-    background:#3e47af;
-    border-radius: .25em;
-    bottom: 180%;
-    color: #edeff0;
-    width: 17.5em;
-    padding: 1em;
-    margin-left: -8.75em;
-    content:'';
+	background: #3e47af;
+	border-radius: .25em;
+	bottom: 180%;
+	color: #edeff0;
+	width: 17.5em;
+	padding: 1em;
+	margin-left: -8.75em;
+	content: '';
 }
-
-
-
-
 /* ---- Nav Icons Settings ---- */
 
 .nav-bar ul {
-    margin-top: 0;
-    background-color: #16a085;
-    display: flex;
-    padding: 10px 20px;
-    flex-direction: row;
-    justify-content:space-between; 
-    padding-left:1.6rem; 
-   
-    
-  
- }
-
-
-
+	margin-top: 0;
+	background-color: #16a085;
+	display: flex;
+	padding: 10px 20px;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-left: 1.6rem;
+}
 .nav-icon img {
-   width: 32px;
-   height: 32px;
-   
- }
-
-
-
-
-
-
-
-
+	width: 32px;
+	height: 32px;
+}
 /**********************
     Main SECTION
 **********************/
-.dashboard, 
-.search-dashboard {
-    text-align: center;
+
+.dashboard, .search-dashboard {
+	text-align: center;
 }
-
 .search-dashboard {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
-
-
-
 input {
-   border: none;
-  font-size: 14px;
-  height: 40px;
-  margin: 0 auto;
-  outline: 0;
-  padding: 15px;
-  width: 80%;
-  background-color: #f1f1f1;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  border-radius: 5px
-
+	border: none;
+	font-size: 14px;
+	height: 40px;
+	margin: 0 auto;
+	outline: 0;
+	padding: 15px;
+	width: 80%;
+	background-color: #f1f1f1;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+	border-radius: 5px
 }
-
 input:focus {
-    outline:0;
-    border: 2px solid #1abc9c;
-    background-color:#fafafa;
+	outline: 0;
+	border: 2px solid #1abc9c;
+	background-color: #fafafa;
 }
-
-
-
 /**********************
  ALERT NOTIFICATION
 **********************/
 
 .alert {
-    background-color:#ffffb2;
-    width: 90%;
-    margin: 0 auto;
-    border: 1px solid #ffff7f;
-    border-radius: 5px;
+	background-color: #ffffb2;
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #ffff7f;
+	border-radius: 5px;
 }
-
 .closebtn {
-    margin-left: 15px;
-    margin-right: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition:0.3s;
-    float: right;
-    font-size: 26px;
-    line-height: 20px;
+	margin-left: 15px;
+	margin-right: 10px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+	float: right;
+	font-size: 26px;
+	line-height: 20px;
 }
-
-.closebtn:hover{
-    color:#d43900;
-    
-    
-   
+.closebtn:hover {
+	color: #d43900;
 }
-
-
 /**********************
    Chart Navigation
 **********************/
 
-
-.chartHeading  {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    font-size: 1rem;
+.chartHeading {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 1rem;
 }
-
-.chart-nav  ul{
-    padding-left: 0;
-    text-align: center;
+.chart-nav ul {
+	padding-left: 0;
+	text-align: center;
 }
-
-.chart-nav a{
-    font-weight:bold;
-    font-size: .8rem; 
-    color: #007a4b;
-    
-    
-   
-  
+.chart-nav a {
+	font-weight: bold;
+	font-size: .8rem;
+	color: #007a4b;
 }
-
 .chart-nav li {
-    display: inline-block;
-    width: 80px;
-    height: 25px;
-    text-align: center;
-    
-    
-    
+	display: inline-block;
+	width: 80px;
+	height: 25px;
+	text-align: center;
 }
-
-.chart-nav li:hover{
-    background-color: #6bce6b;
-    border-radius: 15px;
-    color: #fff;
-    width: 80px;
-   
+.chart-nav li:hover {
+	background-color: #6bce6b;
+	border-radius: 15px;
+	color: #fff;
+	width: 80px;
 }
-
 .chart-nav a:hover {
-    color: #fff;
-    
+	color: #fff;
 }
- 
 .clicked {
-    background-color: #6bce6b;
-    border-radius: 15px;
-    width: 80px;
-    
-   
+	background-color: #6bce6b;
+	border-radius: 15px;
+	width: 80px;
 }
-
 .clicked a {
-    color: #fff
+	color: #fff
 }
-
 .webChart {
-    height: 180px;
+	height: 180px;
 }
-
-
-
-.mobileChart,
-.barChart,
-.webChart {
-    padding: 15px;
-    width: 100%;
-   
+.mobileChart, .barChart, .webChart {
+	padding: 15px;
+	width: 100%;
 }
-
-
-
-
-
 /**********************
  Social Widgets Styles
 **********************/
 
-
-.widget-container{
-    border: 1px solid #9edf9e; 
-    text-align: center;
-    padding-top: 20px;
+.widget-container {
+	border: 1px solid #9edf9e;
+	text-align: center;
+	padding-top: 20px;
 }
-
 .svg-div {
-    width: 70px;
-    height: 70px;
-    background-color: #007a4b;
-    border-radius: 50%;
-   margin: 0 auto;
-    display: inline-block;
-    position: relative;
-   
+	width: 70px;
+	height: 70px;
+	background-color: #007a4b;
+	border-radius: 50%;
+	margin: 0 auto;
+	display: inline-block;
+	position: relative;
 }
-
-
 .widget {
-    height: 50px;
-    width: 50px;
-    fill: #ffffff;
-    position: absolute;
-    margin: auto;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-    
-     }
-
-.social-heading {
-    text-align: center;
-    font-size: 1rem;
+	height: 50px;
+	width: 50px;
+	fill: #ffffff;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
-
-
+.social-heading {
+	text-align: center;
+	font-size: 1rem;
+}
 /**********************
  New Members Section
 **********************/
 
-
 .members-h {
-    text-align: center; 
-    margin-bottom: 80px;
-  
-
+	text-align: center;
+	margin-bottom: 80px;
 }
-
 .members ul {
-  padding-left: 20px;
-padding-right: 20px;
-
-    
+	padding-left: 20px;
+	padding-right: 20px;
 }
-
-
-
-
 .members li {
-   list-style: none;
-    border-bottom: 1px solid #9edf9e ;
-    margin-top: 10px;
-    
+	list-style: none;
+	border-bottom: 1px solid #9edf9e;
+	margin-top: 10px;
 }
-
-
 .members li:last-child {
-    
-    border-bottom: none;
+	border-bottom: none;
 }
-
-
-
-.members-img,
-.info {
-    width: 50%;
-    float: left;
+.members-img, .info {
+	width: 50%;
+	float: left;
 }
-
-
-
-
-
-
 .members h5 {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
-
 .email {
-    font-size: 0.7rem;
-    color:#007a4b;
- }
-
-.avatar {
-    border-radius: 50%;
-    width:100px;
-    display: inline-block;
-    padding-bottom: 15px;
-   
+	font-size: 0.7rem;
+	color: #007a4b;
 }
-
-
+.avatar {
+	border-radius: 50%;
+	width: 100px;
+	display: inline-block;
+	padding-bottom: 15px;
+}
 /***************************
  Recent Activities Section
 ****************************/
 
 .recent-users {
-    list-style: none;
-      padding-left: 20px;
-    padding-right: 20px;
+	list-style: none;
+	padding-left: 20px;
+	padding-right: 20px;
 }
-
 .recent-users li {
-    margin-top: 10px;
-    border-bottom: 1px solid #9edf9e ;
+	margin-top: 10px;
+	border-bottom: 1px solid #9edf9e;
 }
-
-.recent-img, 
-.recent-p {
-    width: 50%;
-    float: left;
-    padding-right: 15px;
+.recent-img, .recent-p {
+	width: 50%;
+	float: left;
+	padding-right: 15px;
 }
-
 .recent-users p {
-    font-size: 0.8em;
-    display: inline-block;
-
+	font-size: 0.8em;
+	display: inline-block;
 }
-
-
-.recent-users li:last-child{
-    border-bottom: none;
+.recent-users li:last-child {
+	border-bottom: none;
 }
-
-
-
 /**********************
  Message User Section
 **********************/
 
 .message-h {
-    text-align: center;
+	text-align: center;
 }
-
 .form {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    
- }
-
-.form-search,
-.message-btn,
-.textarea
-
- {
-    display: block;
-    width: 90%;
-    padding-bottom: 30px;
-     margin: 0 auto;
-    
-    
-  
+	display: block;
+	width: 90%;
+	margin: 0 auto;
 }
-
+.form-search, .message-btn, .textarea {
+	display: block;
+	width: 90%;
+	padding-bottom: 30px;
+	margin: 0 auto;
+}
 .textarea {
-  height: 150px;
-  border: none;
-  font-size: 14px;
-  margin: 0 auto;
-  outline: 0;
-  padding: 10px;
-  background-color: #f1f1f1;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  border-radius: 5px;
-   margin-top: 20px;
-    margin-bottom: 20px;
-    
+	height: 150px;
+	border: none;
+	font-size: 14px;
+	margin: 0 auto;
+	outline: 0;
+	padding: 10px;
+	background-color: #f1f1f1;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-
 .textarea:focus {
-    outline:0;
-    border: 2px solid #1abc9c;
-    background-color:#fafafa;
+	outline: 0;
+	border: 2px solid #1abc9c;
+	background-color: #fafafa;
 }
-
 .message-btn {
-    height: 25px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #1abc92;
-    text-align: center;
-    padding-top: 10px;
-    border: none;
-    border-radius: 5px;
-   
-    
+	height: 25px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #1abc92;
+	text-align: center;
+	padding-top: 10px;
+	border: none;
+	border-radius: 5px;
 }
-
-
 .errorMessage {
-    font-size: 13px;
-    background-color: #ff5d5d;
-    opacity:0.8;
-    color: #fff;
-    margin-bottom: 20px;
-    margin-left:10px;
-    padding-left: 20px;
-    width: 90%;
-    display: none;
+	font-size: 13px;
+	background-color: #ff5d5d;
+	opacity: 0.8;
+	color: #fff;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	padding-left: 20px;
+	width: 90%;
+    border-radius: 5px;
+	display: none;
 }
-
-
 .successMessage {
-    font-size: 13px;
-    background-color: #6db66d;
-    opacity:0.8;
-    color: #fff;
-    height: 18px;
-    margin-bottom: 20px;
-    margin-left:10px;
-    padding-left: 20px;
-    width: 90%;
-    display: none;
+	font-size: 13px;
+	background-color: #6db66d;
+	opacity: 0.8;
+	color: #fff;
+	height: 18px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	padding-left: 20px;
+	width: 90%;
+    border-radius: 5px;
+	display: none;
 }
-
-
 /**********************
  Settings Section
 **********************/
 
 label {
-    width: 100px;
-    padding-left: 15px;
-    
+	width: 100px;
+	padding-left: 15px;
 }
-
-.toggle,
-.strong {
-    width: 50%;
-    float: left;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    margin: 0 auto;
+.toggle, .strong {
+	width: 50%;
+	float: left;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	margin: 0 auto;
 }
-
-
 .timezone {
-    width: 90%;
-    margin: 0 auto;
-    display:block;
-    height: 35px;
-    border-radius: 5px;
-    background-color: #f1f1f1;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-    border: none;
-    padding-bottom: 15px;
-    
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+	height: 35px;
+	border-radius: 5px;
+	background-color: #f1f1f1;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+	border: none;
+	padding-bottom: 15px;
 }
-
 .timezone:focus {
-    outline:0;
-    border: 2px solid #1abc9c;
-    background-color:#fafafa;
-    
+	outline: 0;
+	border: 2px solid #1abc9c;
+	background-color: #fafafa;
 }
-
-
 .setting-btn {
-   width: 80%;
-   display: block;
-   margin: 0 auto;
-   height: 50px;
-   background-color: #bdbdbd;
-    color: #fff;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-  
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	height: 50px;
+	background-color: #bdbdbd;
+	color: #fff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
 }
-
 .settings {
-    padding-top: 50px;
+	padding-top: 50px;
 }
-
 .setting-btn:focus {
-     background-color: #1abc92;
-    outline:0;
-    border: 2px solid #1abc9c;
+	background-color: #1abc92;
+	outline: 0;
+	border: 2px solid #1abc9c;
 }
-
-
 /* ---- Float clearfix ---- */
 
-	.clearfix::after {
-		content: " ";
-		display: table;
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+/* Styles for larger screens */
+
+@media screen and (min-width: 768px) {
+	h1 {
+		font-size: 32px;
+	}
+	.sidebar {
+		background-color: #16a085;
+        float: left;
+		height: 100%;
+		width: 10%;
+		padding-bottom: 100%;
+        
+	}
+	.nav-bar ul {
+		display: inline-block;
+		position: fixed;
+		margin-right: 0;
+		height: 100%;
+        padding-top: 30px;
+       
+	}
+	.nav-bar li {
+		padding-bottom: 20px;
+	}
+	.nav-icon:hover {
+		border-bottom: 3px solid #99ff99;
+		border-radius: 5px;
+	}
+	.profile-name {
+		display: inline-block;
+		float: right;
+		margin-top: -10px;
+	}
+	.profile-name:hover {
+		color: #f2f2f2;
+	}
+	.notify-li {
+		width: 400px;
+		float: right;
+		margin-right: 10px;
+		display: inline-block;
+	}
+	.main-section {
+		float: right;
+		width: 90%;
+	}
+	#dashboard {
+		text-align: left;
+		margin-left: 30px;
+		display: inline-block;
+		float: left;
+	}
+	.search-dashboard {
+		float: right;
+		width: 80%;
+		display: inline-block;
+		background-color: #fafafa;
+	}
+	.search {
+		width: 60%;
+		float: right;
+		margin: 15px 25px 10px 10px;
+	}
+	.alert {
+		display: inline-block;
+		margin-left: 30px;
+		height: 50px;
+	}
+	.alert p {
+		margin-left: 10px;
+	}
+	.closebtn {
+		margin-top: 15px;
+	}
+	.chartHeading {
+		float: left;
+		margin-left: 50px;
 		clear: both;
 	}
-
-
-
-/* Styles for larger screens */
-@media screen and (min-width: 768px) {
-    
-    h1{
-        font-size: 32px;
-    }
-    
-    .sidebar {
-        background-color: #16a085;
-        float:left;
-        height: 100%;
-        width: 10%;
-        padding-bottom: 100%;
-        
-        
-        
-    }
-    
-    
-    
-    .nav-bar ul {
-        display: block;
-        position: fixed;;
-        margin-right: 0;
-        height: 100%;
-       
-      }
-    
-    .nav-bar li {
-        padding-bottom: 20px ;
-    
-        
-    }
-    
-    
-    .nav-icon:hover {
-    border-bottom: 3px solid #99ff99;
-    border-radius: 5px;
-    
+	.webChart {
+		width: 100%;
+		height: 200px;
+	}
+	.chart-nav ul {
+		float: right;
+		margin: 30px 10px;
+		padding-right: 30px;
+	}
+	.dailyChart, .userChart {
+		float: left;
+		border: 1px solid #9edf9e;
+	}
+	.mobileChart {
+		height: 70%;
+		margin: 0 auto;
+	}
+	.userChart, .chart {
+		width: 50%;
+		height: 300px;
+	}
+	.social-container {
+		width: 100%;
+		text-align: center;
+	}
+	.social-heading {
+		text-align: left;
+		padding-top: 20px;
+		margin-left: 20px;
+	}
+	.widget-container {
+		width: 200px;
+		background-color: #f2f2f2;
+		text-align: center;
+		display: inline-block;
+		margin: 10px;
+	}
+	.widget-container h4 {
+		float: right;
+		margin-right: 35px;
+		margin-bottom: 0;
+	}
+	.widget-container p {
+		text-align: right;
+		font-size: 1.6rem;
+		margin-right: 20px;
+		margin-top: 0;
+	}
+	.info p {
+		display: inline-block;
+	}
+	.members-img {
+		width: 20%;
+		float: left;
+	}
+	.info {
+		width: 80%;
+		float: left;
+	}
+	.user-name, .email {
+		width: 50%;
+		display: inline-block;
+	}
+	.info-p {
+		width: 50%;
+		float: right;
+		position: relative;
+		top: -10px;
+		text-align: right;
+		font-size: 0.8em;
+	}
+	.btn-1, .btn-2 {
+		width: 50%;
+		float: left;
+	}
+	.strong, .toggle {
+		padding-left: 30px;
+		padding-bottom: 30px;
+	}
+	.btn-1, .btn-2 {
+		padding-top: 10px;
+	}
+	.timezone {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		height: 50px;
+	}
+	.errorMessage {
+		width: 70%;
+		margin-left: 70px;
+		height: 18px;
+	}
+	.successMessage {
+		width: 30%;
+		margin-left: 70px;
+	}
 }
-
-    
-    
-    .profile-name {
-      display: inline-block; 
-       float: right;
-       margin-top: -10px;
-       }
-    
-    .profile-name:hover {
-        color: #f2f2f2;
-    }
-    
-    .notify-li {
-        width: 400px;
-        float: right;
-        margin-right: 10px;
-        display: inline-block;
-       
-        
-    }
-    
-    
-    .main-section {
-         float: right;
-         width: 90%;
-        
-     }
-    
-    #dashboard {
-        text-align: left;
-        margin-left: 30px;
-        display: inline-block;
-        float: left;
-    }
-    
-    .search-dashboard {
-        float:right;
-        width: 80%;
-        display: inline-block;
-        background-color:#fafafa;
-        
-  }
-    
-    
-    .search {
-       width: 60%;
-       float:right;
-       margin: 15px 25px 10px 10px;
-    }
-
-    
-    .alert {
-        display: inline-block;
-        margin-left: 30px;
-        height: 50px;
-        
-     }
-    
-    .alert p {
-        margin-left: 10px;
-    }
-    
-   
-    .closebtn {
-        margin-top: 15px;
-    }
-    
-    
-    .chartHeading {
-        float: left;
-        margin-left: 50px;
-        clear: both;
-        
-    }
-    
-    .webChart {
-    width: 100%;
-    height: 200px;
-    
-}
-    
-    
-    .chart-nav  ul {
-        float: right;
-        margin: 30px 10px;
-        padding-right: 30px;
-    }
-    
-
-   
-    
-    .dailyChart,
-    .userChart {
-      float: left;
-      border: 1px solid #9edf9e;
-      
-     
-      }
-    
-   
-    .mobileChart{
-        height: 70%;
-        margin: 0 auto;
-     
-    }
-    
-    
-    .userChart,
-    .chart{
-        width: 50%;
-        height: 300px;
-    }
-    
-    .social-container {
-        width: 100%;
-        text-align: center;
-    }
-   
-    .social-heading {
-     text-align: left;
-     padding-top: 20px;
-    margin-left: 20px;
-    }
-    
-    .widget-container {
-        width: 200px;
-        background-color: #f2f2f2;
-        text-align: center;
-        display: inline-block;
-        margin: 10px;
-        
-      }
-    
-    .widget-container h4 {
-        float: right;
-        margin-right: 35px;
-        margin-bottom: 0;
-    }
-    
-    .widget-container p {
-        text-align: right;
-        font-size: 1.6rem;
-        margin-right: 20px;
-        margin-top: 0;
-      
-    }
-    
-     
-    .info p {
-        display: inline-block;
-      
-       
-    }
-    
-      .members-img {
-            width: 20%;
-            float: left;
-            
-        }
-    
-        
-        .info {
-            width: 80%;
-            float: left;
-        }
-    
-     
-        .user-name, 
-        .email {
-           width: 50%;
-            display: inline-block;
-        }
-        
-        
-        .info-p {
-            width: 50%;
-            float: right;
-            position: relative;
-            top: -10px;
-            text-align: right;
-            font-size: 0.8em;
-        }
-        
-    .btn-1,
-    .btn-2 {
-        width: 50%;
-        float: left;
-    }
-    
-    
-   
-    .strong,
-    .toggle
-     {
-        padding-left: 30px;
-        padding-bottom: 30px;
-    }
-    
-    .btn-1,
-    .btn-2 {
-        padding-top: 10px;
-    }
-
-    
-    .timezone {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        height: 50px;
-    }
-    
-    .errorMessage {
-        width: 70%;
-        margin-left: 70px;
-        height: 18px;
-    }
-    
-    .successMessage {
-        width: 30%;
-        margin-left: 70px;
-    }
-}
-
-
-    
-    @media screen and (min-width: 1024px) {
-    
-    .main-section {
-        width: 95%;
-    }
-    
-       
-        
-    .sidebar {
+@media screen and (min-width: 1024px) {
+	.main-section {
+		width: 95%;
+	}
+	.sidebar {
         width: 5%;
-    
-     }
         
-        .nav-bar ul {
-            padding-right: 21px;
-        }
-    
-    .search {
-        width: 40%;
-    }
-    
-    .search-dashboard {
-        width: 90%;
-    }
-    
-    .alert {
-        width: 95%;
+	}
+	.nav-bar ul {
+        padding-top: 25px;
+		padding-right: 21px;
         
-    }
-        
-         .webChart {
-     height: 300px;
-    position: relative;
-    
+	}
+	.search {
+		width: 40%;
+	}
+	.search-dashboard {
+		width: 90%;
+	}
+	.alert {
+		width: 95%;
+	}
+	.webChart {
+		height: 300px;
+		position: relative;
+	}
+	.mobileChart {
+		height: 90%;
+		margin: 0 auto;
+	}
+	.userChart, .chart {
+		width: 50%;
+		height: 450px;
+	}
+	.widget-container {
+		width: 300px;
+		margin: 10px;
+	}
+	.members-recent {
+		margin-top: 50px;
+	}
+	.user-name, .email {
+		top: 0%;
+		text-align: left;
+		position: relative;
+	}
+	.info p {
+		margin: 0;
+	}
+	.members, .recent-activity {
+		width: 50%;
+		float: left;
+		border: 1px solid #9edf9e;
+	}
+	.members-h {
+		text-align: left;
+		padding-left: 20px;
+	}
+	.message-h {
+		text-align: left;
+		padding-bottom: 50px;
+		padding-left: 20px;
+	}
+	.message-user {
+		padding-bottom: 20px;
+		border-right: 1px solid #9edf9e;
+	}
+	.settings {
+		padding-top: 10px;
+		border-left: 1px solid #9edf9e;
+	}
+	.settings, .message-user {
+		width: 50%;
+		float: left;
+	}
 }
-        .mobileChart{
-        height: 90%;
-        margin: 0 auto;
-     
-    }
-        
-    
-        
-    
-    
-    .userChart,
-    .chart{
-        width: 50%;
-        height: 450px;
-    }
-    
-        .widget-container {
-        width: 300px;
-        margin: 10px;
-        
-        
-    }
-        
-        .members-recent {
-            margin-top: 50px;
-        }
-      
-       
-        .user-name,
-        .email {
-            top: 0%; 
-            text-align: left;
-            position: relative;
-            
-        }
-        
-        
-        .info p {
-          margin: 0;  
-        }
-        
-    
-        
-          .members,
-    .recent-activity {
-        width: 50%;
-        float: left;
-        border: 1px solid #9edf9e;
-       
-    }
-        
-        
-        .members-h {
-            text-align: left;
-            padding-left: 20px;
-        } 
-        
-        .message-h {
-            text-align: left;
-            padding-bottom: 50px;
-            padding-left: 20px;
-        }
-        
-        .message-user {
-            
-           padding-bottom: 20px;
-            border-right: 1px solid #9edf9e;
-        }
-        
-        .settings {
-            padding-top: 10px;
-            border-left:  1px solid #9edf9e;
-        }
-        
-        .settings,
-        .message-user {
-            width: 50%;
-            float: left;
-        
-            
-        }
-        
-        
-    
-    }
-
-
-
-
